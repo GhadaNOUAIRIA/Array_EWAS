@@ -41,7 +41,7 @@ dmp_data <- champ.DMP(beta = bVals[,Samples],
           adjust.method = Method, 
           arraytype = ARRAY) 
 
-export_list(x, file = "results/dmp_champ.%s.csv")
+export_list(dmp_data, file = "results/dmp_champ.%s.csv")
 
 ###Finding DMPs with another method (required binary categories of "Class", it will work with multiple categories but the results do not specify which comparison it is)
 dmp_minfi <- dmpFinder(bVals[,Samples], 
