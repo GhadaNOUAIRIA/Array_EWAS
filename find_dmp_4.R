@@ -1,9 +1,10 @@
 #! usr/R
-##This script reads M-values and Beta values of methylation arrays and computes DMPs, Differentially methylated positions
+##This script reads Beta values of methylation arrays and computes DMPs, Differentially methylated positions
 ##Input = beta values of pre-processed methylation data 
+##Input = metadata information with sample ids and group information (categories: case, control or different groups)
 ##output = csv files with p-values for the DMPs in each comparison of categories
 
-##Computations of DMPs and DMRs using ChAMP and minfi
+##Computations of DMPs using ChAMP and minfi
 
 library(dplyr)
 library("readr")
@@ -11,6 +12,7 @@ library("minfi")
 library(tibble)
 library("ChAMP")
 library(rio)
+
 
 ##Load previously saved data (RData objects, for more details, please look at pre-processing.Rmd, cell_composition_correction.R and rem_conf_probes_adj_age.R
 bVals <- read_csv("results/bVals.csv")
