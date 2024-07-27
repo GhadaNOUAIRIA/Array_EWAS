@@ -13,9 +13,6 @@ library("ChAMP")
 library(doParallel)
 library(rio)
 
-###Choose number of cores
-N = 1
-
 ##Load previously saved data (RData objects, for more details, please look at pre-processing.Rmd, cell_composition_correction.R and rem_conf_probes_adj_age.R
 bVals <- read_csv("results/bVals.csv")
 metadata <- read_csv("results/preprocess_metadata.csv") %>%
@@ -36,9 +33,6 @@ ARRAY = "EPIC"
 
 ###Choose adjusted P value
 P = 0.05
-
-###Parallel computation
-registerDoParallel(makePSOCKcluster(N))
 
 ###Computing DMPs
 dmp_data <- champ.DMP(beta = bVals[,Samples], 
