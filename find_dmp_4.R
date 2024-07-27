@@ -13,9 +13,6 @@ library("ChAMP")
 library(doParallel)
 library(rio)
 
-###input=RData objects for PSC+CCA
-###output= DMRs and DMPs for PSC compared with PSC+CCA
-
 ###Parallel computation
 registerDoParallel(makePSOCKcluster(3))
 
