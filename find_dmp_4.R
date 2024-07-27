@@ -10,7 +10,6 @@ library("readr")
 library("minfi")
 library(tibble)
 library("ChAMP")
-library(doParallel)
 library(rio)
 
 ##Load previously saved data (RData objects, for more details, please look at pre-processing.Rmd, cell_composition_correction.R and rem_conf_probes_adj_age.R
