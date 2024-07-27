@@ -18,3 +18,6 @@ adjust_batch_effect_o4.R
 ##The following 2 scripts are mandatory and should be run in the following order
 find_dmp_4.R
 find_dmr_5.R
+
+##The following script can be optional
+find_blocks_6.R
